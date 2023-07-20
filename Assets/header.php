@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,19 @@
     
 <nav class="navbar navbar-light bg-warning">
   <div class="container py-3">
-    <a class="navbar-brand fw-bolder" href="#">nyuMbani</a>
-    <a href="" class="btn btn-outline-primary">Log in</a>
+    <a class="navbar-brand fw-bolder" href="index.php">nyuMbani</a>
+    
+    <?php if($_SESSION['auth']){ ?>
+
+        <a href="logout.php" class="btn btn-outline-primary">Log out</a>
+
+    <?php } else { ?>
+
+        <a href="login.php" class="btn btn-outline-primary">Log in</a>
+
+    <?php } ?>
+
+    
+    
   </div>
 </nav>
